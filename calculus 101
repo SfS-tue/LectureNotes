@@ -131,3 +131,50 @@ Questions:
 
 Domain of f: (set of) all (values) x for which f(x) is defined
 Range of f: (set of) all (values) f(x), where x is in the domain of f
+
+Clicker Questons:
+
+What's the domain of the function sqrt(2x-x**3)
+(-inf, -sqrt(2)] AND [0, sqrt(2)]
+
+All x st, 2x-x**3 >= 0
+
+    2x-x**3 >= 0
+<===>
+    2x >= x**3
+
+if x >= 0, then 2 >=x**2, hence -sqrt(2) <= x sqrt(2), so this part yields the following interval: [0, sqrt(2)]
+if x < 0, then 2 <= x ** 2, hence x <= -sqrt(2) AND x >= sqrt(2) o this part contributes (-INF, -sqrt(2)]
+
+
+What is the domain of the function ((x-3)/(x**2-4))*ln(x)?
+ * ln dus x > 0
+ * 2**2 - 4 = 0 therefore x != 2
+
+-> (0, 2) AND (2, INF)
+
+What is the range of the function -(x ** 2) + 1
+
+(-INF, 1]
+
+
+
+Function compositions (sww paragraph 0.6)
+Definition 6.2: (f o g)(x) = f(g(x)) "f after g"
+
+Example:
+f(fx) = 2x+3
+g(x) = x**2
+(f o g)(x) = 2x**2 + 3
+(g o f)(x) = (2x+3)**2 = 4x**2 + 12x + 9
+
+Not commutative
+
+If f(x) = 4x**3 + 1 and g(x) == sqrt(x+3), compute (f o g)(x) and (g o f)(x)
+
+(f o g)(x) = f(g(x)) = 4(g(x)**3 + 1 = 4(sqrt(x+3))**3 + 1 = 4(x+3)**(3/2) + 1
+(g o f)(x) = g(f(x)) = sqrt(4x**3+4) = 2sqrt(x**3+1)
+
+Let f(x) = (x + 2)**-1 Determine f 0 f
+
+(f o f)(x) = ((x + 2) ** -1 + 2)**-1 = 1/(1/(x+2) + 2) = (x+2)/(sx+5)
