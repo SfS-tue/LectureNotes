@@ -1,0 +1,152 @@
+Def 3.1: Function f assigns a unique value f(x) to every x in its domain.
+
+f(x) = x/x != g(x) = 1
+
+f(x) is not defined for x=0
+
+domain of x is all real numbers except 0
+domain f = { x E- |R | x != 0 } = (-INF, 0) U (0, INF)
+domain g = |R
+
+
+Verticle line test (test to see if a line is a function): line should intersect at most once
+
+Paragraph 0.4 Transformations of functions
+
+Combinations:
+h = f + g 
+h(x) = f(x) + g(x)
+
+f-g
+h(x) = f(x) - g(x)
+
+f*g
+h(x) = f(x) * g(x)
+
+f/g
+h(x) = f(x)/g(x), g(x) != 0
+
+
+Composition:
+h = f o g
+h(x) = f(g(x))
+
+sqrt(1-x**2)
+x -> [ x |-> x**2 ] -> [ x |-> 1-x ] -> [ x |-> sqrt(x) ] -> sqrt(1-x**2)
+                   x**2             1-x**2
+
+Translations & Sealings:
+f(x) 
+Vertical translation:      f(x) + c 
+Horizontal translation:    f(x + c)
+
+
+Classes of functions:
+ * Polynomials (lines, paraboles, ...)
+ * Rational functions
+ * Transcendental functions
+   * trgometric functions
+       sin(x), sin**-1(x) = arcsin(x0
+   * exponential/logeritmic functions
+       e ** x, ln(x) = log(x)
+
+               e
+       ln(x) =  log(x) = log (x) = log(x)
+                            e
+
+       In computer sciences: log(x, 2)  = lg(x)
+       In natural sciences:  log(x, 10) = lg(x)
+   * hyperbolic functions
+       sinh(x)
+
+
+Polynomials:
+
+Def 1.4: functions f(x), defined on |R, of the form:
+
+    f(x) = a  * x ** n + a * x**(n-1) + .... a  * x + a
+            n             n-1                 1        0
+
+Coefficients a  ,  a   ,  ...., a        E- |R, a   != 0
+              0      1            n              n
+
+Degree of f is n
+
+Question: is f(x) = 0 a polynomial? } No
+
+
+Constant     polynominals f(x) = a,                                                                 a != 0
+Linear       polynominals f(x) = a * x      + b,                                                    a != 0
+Quadratic    polynominals f(x) = a * x ** 2 + b * x      + c                                        a != 0
+Cubic        polynominals f(x) = a * x ** 3 + b * x ** 2 + c * x      + d                           a != 0
+Quartic      polynominals f(x) = a * x ** 4 + b * x ** 3 + c * x ** 2 + d * x      + e              a != 0
+Quintic      polynominals f(x) = a * x ** 5 + b * x ** 4 + c * x ** 3 + d * x ** 2 + e * x + f      a != 0
+
+    g(x) = h(x)
+<===>
+    { put f(x) = f(x) - h(x) }
+    f(x) = 0
+
+
+Finx x for which f(x) = 0 ( Finding zeroes of f )
+                          ( Find roots of the equation f(x) = 0 )
+
+Linear polynominal, f(x) = 0 <===> x = -b/a
+
+Quadratic polynominal:
+
+        -b +/-  sqrt(b**2 - 4 * a * c)
+   x = -------------------------------, D = b**2-4ac >= 0
+                    2*a
+
+
+
+    ax**2 + bx + c = 0
+<===>
+    x**2 + b/a * x + c/a = 0
+<===>    "completing the square"
+    (x+ b/(2a))**2 - (b**2)/((2a)**2) + c/a = 0
+<===>
+    (x + b/(2a)) ** 2 = (b**2)/(4 * a ** 2) - c/a = (b**2 - 4 * a * c)/(4 * a ** 2)
+<===>
+    x + b/(2a) = ( +/- sqrt(b**2 - 4 * a * c) )/(2 * a)
+<===>
+    x = see up ^
+
+Cubic/Quartic polynominal: <Really long forula>
+Quintic: No standard formula
+
+Numerical methods:
+
+Factoring polynominals:
+
+(x - 2)(x**2 - x - 1) = x**3 - 2x**2 - x ** 2 + 2 * x - x + 2
+                      = x**3 - 3x**2 + x + 2
+
+Try x = 0, x = 1, x = -1, x = 2
+
+2 ** 3 - 3 * 2**2 + 2 + 2 = 0
+
+long division ("staartdeling")
+
+   x - 2 / x**3 - 3 x**2 + x + 2 \ x**2 - x - 1
+           x**3 - 2 x**2
+           ------------- -
+                 -x**2
+                 -x**2 + 2x
+                ----------- -
+                       - x + 2
+                       - x + 2
+                       -------- -
+                             0
+
+Theorem 1.4 (factor theorem): For any polinominal f, we have :
+    f(a) = 0 <==> "x-a is a factor of f(x)"
+             <==> "there exists a polynominal g(x) such that f(x) = (x-a)g(x)"
+
+Proof <= easy part
+      => hard part
+
+Write f(x) = (x-a) * g(x) + r(x), deg r(x)
+suppose f(a) = 0 then r(a) = 0
+   
