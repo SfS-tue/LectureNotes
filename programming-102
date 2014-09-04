@@ -1,0 +1,3 @@
+
+scanner.hasNext() -> true when there is input left (in interactive mode it's always true)
+scanner.hasNextInt() -> true if the next input is a number
