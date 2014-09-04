@@ -1,0 +1,122 @@
+No Oase -> http://www.win.tue.nl/~luttik/courses/lst
+
+Weekly tests (7 of them) in week 2 till 8. Always the 5th hour
+
+Schedule:
+wed 5+6 test & tutorial (in groups)
+wed 7+8 lecture
+fri 1+2 lab session     (in groups)
+fri 3+4 lecture
+
+A proposition is a statement that is true or false
+
+^ and
+V or
+O+ exclusive or (xor)
+-_ not
+=> if .... then ... (implication)
+<=> if and only if
+
+propositional variales: a, b, c, ....
+
+Inductive definition of abstract propositions:
+1. (basis) Every propositional variable is an abstract composition
+2. (step)
+2.1 If P is an abstract composition, then so is (-_ P)
+2.2 If P and Q are abstract propositions then so are (P ^ Q), (P V Q), (P => Q), (P <=> Q)
+
+(-_ is unary, ^, V, => and <=> are binary)
+
+
+Why abstract proposition
+
+
+        1-----
+           a
+   2.1--------   ----- 2
+       (-_ a)      b
+   2.2----------------   ----- 2
+      ((-_ a)  ^   b)      b
+   2.2------------------------
+     (((-_ a)  ^   b)  V   b
+
+1. Outermost parentheses can always be omitted
+2. We aree on the following priority schema
+
+  +--------+
+  |   -_   |
+  +--------+
+  |  ^, V  |
+  +--------+
+  |   =>   |
+  +--------+
+  |  <==>  |
+  +--------+
+
+Implication:
+
+ P | Q | P => Q
+ ==*===*=======
+ 0 | 0 | 1
+ --+---+-------
+ 0 | 1 | 1
+ --+---+-------
+ 1 | 0 | 0
+ --+---+-------
+ 1 | 1 | 1
+
+
+ n > 2 => n + 1 > 2
+
+Biimplication
+
+ P | Q | P <=> Q
+ ==*===*========
+ 0 | 0 | 1
+ --+---+--------
+ 0 | 1 | 0
+ --+---+--------
+ 1 | 0 | 0
+ --+---+--------
+ 1 | 1 | 1
+
+An anstract proposition is a tautology     if it's column in a truth tale exclusively consists of 1s
+An anstract proposition is a conytadiction if it's column in a truth tale exclusively consists of 0s
+A contingent is neither a proposition nor a contradiction
+
+All tautologies are equivalent
+
+We use the symbol True to denote an arbitary tautology
+
+All contradictions are equivalent
+
+We introduce an extra symbol False to denote an arbitary contradiction
+
+Note that not all contengencies are equivalent
+
+If P is equivalent to Q, then we write:
+
+   val
+ P  =  Q
+
+Note that it's meta symbol.
+It is NOT part of the vocabulary
+
+          val
+ a => B    =    -_ a V b
+ ........      .........
+    .           .
+    abstract    abstract
+    proposition propostion
+,,,,,,,,,,,,,,,,,,,,,,,,,
+ ,
+ Meta-formula
+
+
+Noteworthy equivelents:
+
+-_( P ^ Q) =val= -_ P V -_Q
+P => Q     =val= -_Q => -_P
+P <=> Q    =val= (P=>Q)^(Q=>P)
+
+Substitution preserves equivalence
