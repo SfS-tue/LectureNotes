@@ -1,0 +1,146 @@
+Week 2:
+-------
+
+PAR 10.1 Vectors in the plane
+PAR 10.2 Vectors in space
+PAR 10.3 Dot product
+PAR 10.4 Cross product
+PAR 10.5 Lines & Planes in space
+
+
+Distances in 3D
+
+between a point and:
+1) another point
+    || a_ - b_ ||
+2) a line
+    ||a_ x b_ || / ||b_||
+3) a plane
+    plane ax + by + cz = d
+    point (x0, y0, z0)
+    distance = |a * x0 +  * y0 + c * z0 + d|/sqrt(a**2 + b ** 2 + c ** 2)
+
+Par 10.2 Distance between two points, or vectors:
+    is given by
+        || a_ - b_ || = sqrt( (a1 - b1) ** 2 + (a2 - b2) ** 2 + (a3 - b3) ** 2 )
+        a_ = (a1 a2 a3)    b_ = (b1 b2 b3)
+
+  ^ |
+z | |   . a_
+    |.  /
+  . |  /
+b_\ | /
+   \|/             y ->
+    /-----------------
+   /
+  /         .... = a_ - b_
+ /   |
+/ x  v
+
+b_ + (a_ - b_) = a_
+
+
+Par 10.3 Dot product
+
+a_ * b_ = a1 * b1 + a2 * b2 + a3 * b3
+
+O- = [theta]
+
+Anle O- between a_ and b_ is determined by:
+    cos O- = (a_ * b_) / (||a|| * ||b||)
+
+
+Cauchy schwartz inequality
+    | cos O- | <= 1
+
+    | (a_ * b_) / (||a|| * ||b||) | <= 1
+    | a_ * b_ | / (||a|| * ||b||) <= 1
+    hence: | a_ * b_ | <= ||a|| * ||b||
+
+Triangle inequality
+
+    || a_ + b_ || <= ||a_|| + ||b_||
+
+Proof:
+    || a_ + b_ || ** 2  = (a_ + b_) * (a_ + b_) = a_ * a_ + a_ * b_ + b_ * a_ + b_ * b_ = ||a_|| ** 2 + 2 * a_ * b_ + ||b_||**2  <= ||a|| ** 2 + 2 * | a_ * b_ | + ||b_|| ** 2 <= ||a|| ** 2 + 2 * ||a_|| * ||b_|| + ||b|| ** 2 = (||a_|| + ||b_||)**2
+
+Note:
+    a_ * a_ = a1**2 + a2 ** 2 + a3 ** 2 = || a || ** 2
+
+
+
+Projection of a_ onto b_ 
+
+   a_/|
+    / |
+   /  |
+  /\O-|
+ /-|--|-------- b_
+ [====]
+   projection
+
+proj  a_ = b_/ || b_ || * cos (O-) * || a_ || = (a_ * b_)(b_ / (||b|| ** 2))
+    b_
+
+comp  a_ = (a_ * b_)/||b|| (gives a scalar)
+    b_
+
+
+Par 10.4 Cross product
+
+For a_, b_ E- |R ** 3, a_ x b_ statisfies:
+1) a_ x b_ othogonal to a_ and b_
+2) direction follows the right hand rule
+3) ||a_ x b_|| = ||a_|| ||b_|| * sin O-
+
+Def a_ x b_ = (a2 * b3 - a3 * b2, a3 * b1 - a1 * b2, a1 * b2 - a2 * 1) [Will be provided on the test, no need to memorize]
+
+    a_ * (a_ x b_) = 0
+
+
+Determinants 2x2, 3x3 [optional]
+
+| a1 a2 |
+| b1 b2 | = a1 * b2 - a2 * b1 = "Area of parallellogram spanned by a_, b_ E- |R ** 2"
+
+| a1 a2 a3 |      | b2 b3 |      | b1 b3 |   | b1 b2 |
+| b1 b2 b3 | = a1 | c2 c3 | - a2 | c1 c3 | + | c1 c2 | = "Volume of parallel pipeal spanned by a_, b_, c_ E- |R ** 3"
+| c1 c2 c3 |
+
+------
+
+
+Distance point to line in 3D
+
+           Q
+         ./|
+     a_./  |
+     ./    | ||a_|| * sin O-
+   ./      |
+ ./ O-     |
+/----------------|-----------
+P       b_       R
+
+distance = ||a_|| * sin(O-) =  || a_ x b_ || / ||b_|| 
+
+See example 4.5
+
+
+
+Par 10.5 Lines in space
+
+Two lines in |R**3 are either:
+*) parallel (includes identical lines)
+*) intersecting (in unique point) (angle O-)
+*) skew lines (kruisende lijnen)
+
+Example:
+
+l1: (x y z) = (2 1 5) + t(-1 2 2), t E- |R
+l2: (x y z) = (1 2 1) + s(1 -1 3), s E- |R
+
+l1 intersects l2?
+
+ { 2 - t  = 1 + s
+ { 2 + 2t = 1 - s
+ { 5 + 2t = 1 + 3 s
