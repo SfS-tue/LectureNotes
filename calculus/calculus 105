@@ -1,0 +1,67 @@
+
+lim x->a (f(x)) = "value of f(x) as x approaches a"
+
+(that is, "x gets infinitely close to a, but x is never equal to a")
+
+lim x-> 0 (x/x ) = 1
+
+= L E- |R
+iff lim x->a - (f(x)) = L, lim x->a + (f(x)) = L 
+
+
+Example 3.5 (Par 1.3): Finding a limit by rationing.
+
+lim x-> 0 ((sqrt(x+2) - sqrt(2))/x) = lim x->0 ((sqrt(x+2)-sqrt(2))/x * (sqrt(x+2) + sqrt(2)) / (sqrt(x+2) + sqrt(2))) = lim x->0 (((x+2)-2)/(x(sqrt(x+2) + sqrt(2))) = lim x->0 (1/(sqrt(x+2) + sqrt(2)) = 1/(2*sqrt(2))
+
+
+lim x->0 (sqrt(x**3 + 4 * x ** 2)/x) = lim x->0 (sqrt(x**2) * sqrt(x+4)/x) = "does not exist"
+
+lim x->0 + (sqrt(x ** 2) * sqrt(x+4)/x) = lim x->0 + (x(sqrt(x+4))/x = lim x->0 (sqrt(x+4)) = 2
+lim x->0 - (sqrt(x ** 2) * sqrt(x+4)/x) = lim x->0 - ((-x * sqrt(x+4))/x) = lim x->0 - (-sqrt(x+4)) = -2
+
+Squeeze theorem
+
+Suppose f(x) <= g(x) <= h(x) for some range around x=a
+
+If lim x->a (f(x)) = L, and lim x->a (h(x)) = L, then lin x->a (g(x)) = L
+
+lim x->0 (sin(x)/x) = 1
+
+        /|
+       / |
+1|-----\ |
+ |  /|  \arc length = x
+ | / |sin(x)
+ |/x |   |
+ |-------|
+
+(I) sin(x) <= x ?
+(II) tan x = tan(x)/1
+x<= tan(x) ?
+
+Area "big" triagle = 1 * tan(x) / 2 = tan(x) / 2
+Area unit circle segment = x/(2 PI) * PI = x/2
+
+x/2 <= tan(x)/2
+
+x <= tan(x)
+
+
+cos(x) <= sin (x)/x <= 1
+
+Par 1.5
+
+f(x) = 1/x
+
+(I) Limits at infinity
+
+lim x->INF  (1/x) = 0
+lim x->-INF (1/x) = 0
+
+(II)
+lim x->0 + (1/x) = INF
+lim x->0 - (1/x) = -INF
+
+
+
+
