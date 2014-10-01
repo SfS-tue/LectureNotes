@@ -1,0 +1,102 @@
+
+Week 3b Differentation, part I
+------------------------------
+
+Par 2.1: Tangent lines
+Par 2.2: The Derivative
+    f'(x), (f(x))', D f(x), Dx f(x), (df(x))/(dx), ...
+Par 2.3: Power Rule
+    (x**n)' = n*x**(n-1), (x**r)'= r*x**(r-1)
+Par 2.4: Product rule
+    (f(x) * g(x))' = f'(x) * g(x) + f(x) * g'(x)
+         Quotient rule
+    (f(x) / g(x))' = (f'(x) * g(x) - f(x) * g'(x))/(g(x)**2)
+Par 2.5: Quotient Rule
+    (f(g(x)))' = f'(g(x)) * g'(x)
+
+
+
+Examples:
+(tan x)'= (sin (x)/cos(x))'
+        = (sin'(x) * cos(x) - sin(x) * cos'(x))/(cos(x)**2)
+        = (cos (x) * cos(x) - sin(x) * -sin(c))/(cos(x)**2)
+        = 1/(cos(x) **2)
+
+(sin (x**2))' = cos(x**2) * (x**2)'
+              = cos(x**2) * 2*x
+              = 2x * cos(x**2)
+
+(sin(ln(x)**2))' = cos(ln(x)**2) * 2 * ln(x) * 1/x = (2 * ln x)/x * cos(ln(x)**2)
+
+Recap:
+lim x->a f(x) = L
+* "x approaches a arbitrarily closely, but never reaches a"
+* for a E- |R, a = INF, a = -INF
+* if l E- |R, then "limit is said to exist"
+* Moreover, if L=f(a), then "f is said to be continuous at x=a".
+
+Example:
+
+lim x->INF ((5X-7)/(4x+3)) = lim x->INF (((5X-7) * (1/x))/((4X+3) * (1/x)))
+                           = lim x->INF ((5-7/x)         /(4+3/x))
+                           = (lim x->INF (5-7/x))/(lim x->INF (4+3/x))
+                           = 5/4
+
+Derivatives:
+f(x) (continuous at x=a)
+Equation tangent line in point slope form:
+y = f'(x)(x-a) + f(a)
+f'(a) = ïnstantaneous rate of change at x=a"
+
+Def 2.2: Derivative of f(x) is defined as f'(x) = lim h->0 ((f(x+h) - f(x))/h), whenever this limit exists at point x
+
+Example:
+
+f(x)  = 3 * x **2 + 2
+f'(x) = lim h->0 ((2(x+h)**2 + 2 - (3 x**2 + 2))/h)
+      = lim h->0 ((6xh+3h**2)/h)
+      = lim h->0 (6x + 2h)
+      = 6 * x
+
+
+The power rule
+
+f(x)  = x**n
+f'(x) = lim h->0 ((x+h)**h - x**n)/h)
+      = lim h->0 (x**n + n * x ** (n-1) * h + n(n-1)/2 * x ** (n-2) * h**2 + ... + h*n - x*n)/h)
+?     = lim h->0 h ( ..... ) / h ?
+      = lim h->0 (n * x ** (n-1) + n(n-1)/2 * x **(n-2) * h + ... + h**(n-1))
+      = lim h->0 (n * x ** (n-1) + 0                        + ... + 0)
+
+Also, f(x) = x ** (1/2) = sqrt(x)
+
+f'(x) = lim h->0 ((sqrt(x+h) - sqrt(x))/h)
+      = lim h->0 ((sqrt(x+h) - sqrt(x))/h * (sqrt(x+h) + sqrt(x))/(sqrt(x+h) + sqrt(x)) "Rationalizing"
+      = lim h->0 ((x+h-x)/(h(sqrt(x+h)-sqrt(x)))
+      = lim h->0 (h      /(  sqrt(x+h)-sqrt(x)))
+      = lim h->0 (1      /(  sqrt(x+h)+sqrt(x)))
+      = lim h->0 (1      /(  sqrt(x+0)+sqrt(x)))
+      = lim h->0 (1      /(2*sqrt(x)))
+      = 1/2 * x ** (-1/2)
+
+Linear approximation of f
+
+f'(x)  =approximatily= (f(x+h)-f(x))/h for small h
++----------------------------------+                              
+| f(x+h) =approx= f(x) + h * f'(x) |
++----------------------------------+
+
+
+Extra (f(x) + g(x))' ?
+       -----------
+
+f(x+h) + g(x+h) =approx= f(x)+ h * f'(x) + g(x) + h * g'(x)
+                       = f(x) + g(x) + h(f'(x) + g'(x))
+                                         -------------
+
+Product rule
+f(x+h) * g(x+h) =approx= (f(x) + h*f'(x))(g(x)+h*g'(x))
+                       = f(x) * g(x) + h(f'(x) * g(x) + f(x) * g'(x)) + h ** 2 f'(x) * g'(x)
+                                                                        -------------------- = neclectable, h was small, h**2 is even smaller
+
+2

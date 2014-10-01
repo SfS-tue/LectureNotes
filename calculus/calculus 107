@@ -1,0 +1,74 @@
+Week 4a Differetiation, part II
+-------------------------------
+
+Par 2.3 Higher Order derivatives
+Par 2.6 Derivaties of Trigonometric Functions
+Par 3.3 Maximum and Minimum Values
+Par 3.4 Increasing and Decreasing Functions
+Par 3.7 Optimization
+
+Recap:
+  Function f continuous at x if:
+    lim h->0 (f(x+h)) = f(x)
+
+  Function f is differentiable at x if
+    lim h->0 ((f(x+h)-f(x))/h) exists
+    f'(x) := lim h->0 ((f(x+h)-f(x))/h) "f'(x) is ... if the limit exists."
+
+  Theorem:
+    "f differentiable at x" => "f continuous at x"
+
+  Proof (sketch):
+    Recall idea of linear approximation of f around x:
+      f(x+h) =~ f(x) + h * f'(x)
+                       -   ----- = fixed number ( if f differentiable )
+                       |
+                       - = h is small (h->0)
+
+Par 2.3 Higher order derivatives
+================================
+
+s(t) = "position at time t"
+
+v(t) = s'(t) = lim [delta]t -> 0 ((s(t + [delta]t) - s(t))/[delta]t)
+
+a(t) = v'(t) = lim [delta]t -> 0 ((v(t + [delta]t) - v(t))/[delta]t) = s''(t)
+
+----
+
+f(x)
+f'(x)
+f''(x)
+f'''(x) = f**(3)(x)
+
+Par 2.6 Derrivatives of Trigonometric Functions
+
+(sin x)' = lim h->0 ((sin(x+h)                          - sin(x))/h)
+         = lim h->0 ((sin(x) * cos(h) + cos(x) * sin(h) - sin(x))/h)
+         = lim h->0 ((sin(x) * (cos (h) - 1)  +  cos(x) * sin(h))/h)
+         = sin (x) * lim h->0 ((cos (h) - 1)/h) + cos(x) * lim h->0 (sin (h)/h
+         = cos (x), if lim h->0 ((cos (h) - 1)/h) = 0 and lim h->0 (sin (h)/h) = 1
+
+lim h->0 (cos (h) - 1)/h) = lim h->0 ((1-2*sin**2(h/2)-1)/h)
+                          = lim h->0 ((-2 * sin**2(h/2))/h)
+                          = lim h->0 ((-sin(h/2) * sin(h/2))/(h/2))
+                          = lim h->0 (sin(h/2)/(h/2)) * lim h->0 (-sin(h/2))
+                          = 1 * (-sin(0/2))
+                          = 0
+
+----
+
+Theorem 3.1 Extreme vale theorem:
+
+ f cts on [a, b] then f has both an absolute maximum and an absolute minimum on [a, b]
+
+Def f(c) local maximum if f(c) >= f(x) for all "x around c"
+
+Def Critical number c (in domain of f) if f'(c) = 0 or f'(c) is undefined
+
+Theorem 3.2 (Fermat's theorem)
+   f(c) local extermum =>  is a critical number
+
+
+Theorem 3.3
+   f cts on [a, b] => absolute exteme values only at endpoints a, b or at a critical number in [a, b]

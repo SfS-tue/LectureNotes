@@ -1,0 +1,23 @@
+Week 5b
+-------
+
+Par 3.1 Linear Approximations
+Par 3.2 Indeterminate Forms & l'Hospital's Rule
+Par 3.6 Overview of curve sketching
+
+Linear approximations
+=====================
+
+L(x) = f(x0) + f'(x0)(x-x0)
+L(x) is a linear function (polonomial of degree 1)
+
+Then: L (x0) = f( x0)
+      L'(x0) = f'(x0)
+
+For x =approx= x0, L(x) =approx= f(x)
+Recall f'(x0) =approx= (f(x0+h)-f(x0))/h, for a small h
+So, L(x) = f(x0)+f'(x)(x-x0), put h = x-x0
+         = f(x0)+f'(x)h
+  =approx= f(x0)+f(x0+h)-f(x0)
+         = f(x0+h)
+         = f(x0)

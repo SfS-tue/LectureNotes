@@ -1,0 +1,104 @@
+Week 4b Inverse functions
+-------------------------
+
+Par 0.3 Inverse functions
+Par 2.5 Chain Rule -> theorem 5.2
+Par 0.4 Inverse Trigonometric Functions
+Par 2.8 Implicit differentation and Inverse Trigonometric functions
+
+Par 0.2 Inverse functions
+-------------------------
+
+  set A           set B
+   / \      f      / \
+  /   \    --->   /   \
+ /     \         /     \
+    X               y
+ \     /     g   \     /
+  \   /    <---   \   /
+   \ /             \ /
+
+x = g(y)
+y = f(x)
+
+Examples:
+  f(x) = x,      g(x) = x
+  f(x) = x + 1,  g(x) = x - 1
+  f(x) = x * 2,  g(x) = x / 2
+  f(x) = e ** x, g(x) = ln x
+
+Def f and g are inverses of eachother if "they undo each other's acction", i.e.,
+  g(f(x)) = x, for all x E- A
+  f(g(x)) = x, for all x E- B
+
+Example:
+  f(x) = x ** 3, g(x) = x ** (1/3)
+  Because g(f(x)) = (x**3)**(1/3) = x
+
+
+The geometric meaning of taking inverses is reflection of a raph in y = x
+
+Consider f(x) = x ** 2, g(x) = sqrt(x)
+  inverse of f does not pass vertical line test, is not a function
+  can directly see from the horizontal line test on f
+  f(x) = x ** 2, for x >= 0 then g(x) = sqrt(x) is inverse.
+
+Def. One-to-one function: for every y in the range of the function f, there is exactly one x in the domain of f for which y = f(x)
+
+Theorem 3.1: Function has an inverse iff it is one-to-one
+
+REMARK: We write f**-1(x) is inverse of f(x), should NOT be read as 1/f(x)
+
+
+Note f(g(x)) = x holds for f and it's inverse g
+
+Take derivatives on both sides, using the chain rule:
+
+ f'(g(x)) * g'(x) = 1
+
+or equivalently g'(x) = 1/f'(g(x)) = 1/f'(y)
+
+Example:
+  f(x) = x**5 + 4 ** x - 2
+  Q: (f**-1(-2))' ?
+  (f**-1(-2))' = 1 / f'(f**-1(-2))
+  f'(x) = 5x**4 + 4
+  f-1(-2) = Z, f(f**-1(-2)) = -2
+  Z**5 + 4 ** Z - 2 = -2
+  Z = 0
+  (f**-1(-2))' = 1/f'(0) = 1/4
+
+
+Par 0.4 Inverse Trigonometric Functions
+---------------------------------------
+
+Inverse of sin x
+sin x does not pass the horizontal line test: so does not have a true inverse.
+To get the inverse, we take a part of the function.
+Take sin x, for -PI/2 <= x <= PI/2
+
+Def Inverse sin x
+  y = arcsin x = sin ** -1 (x)
+  <==>
+  sin y = x, -PI/2 <= y <= PI/2
+  In words: "Angle y for which sin y = x"
+
+
+(arcsin x)' = ?
+
+f(x) = sin x
+f'(x) = cos x
+g(x) = arcsin x
+
+(arcsin x)' = 1/f'(g(x)) = 1/cos(arcsin x) = 1/sqrt(1-x**2)
+
+Find tanget line in iven point to curve
+
+  x**2 * y ** 2 - 2 * x = 4 - 4 ** y
+  Implicitly,
+    y = y(x)
+  Take derivatives on both sides:
+    2x * y ** 2 + x ** 2 * 2 * y * y' = -4 y'
+  (y**2)'= ((y(x))**2)'= 2 * y(x) * y'(x) = 2 * y * y'
+    
+
