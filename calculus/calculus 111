@@ -1,0 +1,51 @@
+[i] = Integraal sign
+[s] = sigma
+
+Week 6a Integration Part I/ III
+-------------------------------
+
+Par 4.1 Antiderivatives
+Par 4.2 Sums & Sima Notation
+Par 4.3 Area
+Par 4.4 The definite Integral
+Par 4.5 The fundamental Theorem of Calculus
+
+
+Par 4.1 Antiderivatives (Primitives)
+====================================
+
+An antiderivative F(x) of function f(x) satifies F'(x) = f(x)
+
+Def 1.1 Indefinite integral of f(x):
+  [i] f(x) dx = F(x) + c
+  Where F(x) is an antiderivative of f(x) (c is "constant of integration")
+
+[i] (sin(x)) dx = -cos x + c 
+[i] (1/x) dx = ln |x| + c
+[i] (f'(x)/f(x)) dx = ln |f(x)| + c
+
+Sigma notation
+==============
+
+[s] 100 -> i=1 (i) = 1 + 2 + 3 + ... + 99 + 100 = 5050
+                     |   |---- 101  ---|     |
+                     |-------- 101 ----------|
+
+[s] n -> i=1 (i) = n(n+1)/2
+
+[s] n -> i=1 (i^2) = n(n+1)(2n+1)/6
+
+[s] n-1 -> i=0 (2^i) = 2^n-1
+
+[s] INF -> i = 0 ((1/2)^i) = 2
+
+Par 4.3 + 4.4 Area and the definite Integral
+============================================
+
+Rieman sum: [s] n -> i=1 (xi) [delta] x
+
+[delta] x = (b-a)/n
+
+Definite integral: lim n->INF ( [s] n->i=1 ( f(xi) [delta]x )) = Area = [I] a -> b (f(x)) dx if limit exists (Or, in other words, if f is interatable on [a, b])
+
+
