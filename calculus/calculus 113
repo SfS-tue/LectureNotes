@@ -1,0 +1,40 @@
+Week 7a Integration, part III/III
+---------------------------------
+Par 5.4 Arc Length
+Par 6.6 Improper Integrals
+
+Par 3.3
+=======
+
+In = [I] (cos^n(x)) dx, n >= 0
+I0 = [I] (cos^0(x)) dx = [I] 1 dx = x + c
+I1 = [I] (cos^1(x)) dx = [I] cos(x) dx = sin (x) + c
+I1 = [I] (cos^n(x)) dx = [I] (cos^(n-1)(x)) d sin(x) = [I] (u) dv = uv - [I] (u) du = cos^(n-1)(x) * sin(x) - [I] (sin (x) * (n-1) * cos^(n-2)(x) * -sin(x)) dx = sin (x) * cos^(n-1)(x) + (n-1) * [I] (sin^2(x) * cos^(n-2)(x)) dx = sin (x) * cos^(n-1)(x) + (n-1) * [I] ((1-cos^2(x)) * cos^(n-1)) dx = sin (x) * cos^(n-1)(x) + (n-1) * [I] (cos^(n-1)(x)) dx - (n-1) * [I] (cos^n(x)) dx
+                        (d sin x = cos x d x)             { u = cos^(n-1)(x), v = sin x
+                                                          { du = (n-1) * cos^(n-2)(x)*-sin(x), du = cos(x) dx
+
+In = sin x * cos^(n-1)(x) + (n-1) * I{n-2} - (n-1) * In
+So,
+  n * In = sin(x) * cos^(n-1)(x) + (n-1) * I{n-2}
+Or,
+  In = 1/n * sin(x) * cos^(n-1)(x) + (n-1)/n * I{n-2}
+
+Reduction formula
+
+Now, consider Kn = [I] 0 -> PI/2 (cos^n(x)) dx
+K0 = x |{0->PI/2} = PI/2
+K1 = sin (x) |{0->PI/2} = 1
+Kn = 1/n * sin(x) * cos^(n-1)(x) | {0->PI/2} + (n-1)/n * K{n-2} = (n-1)/n * K{n-2} (n>=2)
+So, 
+
+
+Par 5.4 Arc length
+==================
+
+Recall: Area lim n->INF [M] i=1 -> n (f(x)) [d]x = [I] a->b (f(x)) dx
+
+Average value of a function on [a, b]
+([M] i=1->n f(x))/n 
+
+Par 6.6 Improper Integrals
+==========================

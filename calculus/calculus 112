@@ -1,0 +1,109 @@
+Week 6b Integration, part II/III
+--------------------------------
+
+Par 4.6 Integration by substitution
+Par 6.1 Review of Formulas and Techniques
+Par 6.2 Integration by parts
+Par 6.3 Trigonomic Techniques of Integration
+
+
+Recap
+=====
+
+[i] f(x) dx = F(x) + c, F is an antiderivative of f, i.e., F'(x) = f(x)  "Indefinite integral"
+[i] a->b f(x) dx = F(b) - F(a) = F(x) |a->b "Definite integral
+
+|b
+|      = |a->b
+|a
+"
+F(x) = [i] 0->x f(t) dt "existence of antiderivative"
+
+But, possibly no closed formula for F(x), Exmple: [i] (e**(-x**2)) = answer error
+
+Simple properties follow,
+  like [i] b->a (f(x)) dx = - [i] a->b (f(x)) dx,
+       [i] a->a (f(x)) dx = 0,
+       [i] 0->0 (1/x)  dx = 0
+
+Finally note,
+  1/(b-a) * [i] a->b (f(x)) dx = "avg of f over [a, b]."
+
+
+Par 6.1 Substitution Rule
+=========================
+
+Example:
+    [i] (2*x*sqrt(1+x*2)) dx = F(x) + c
+  
+  Introduce a ndew variable u, and put
+    u = 1+x**2
+  Then,
+    u'= 2x, or equivalently du/(dx) = 2x, or
+    du = 2x * dx
+  So,
+    [i] (2x * sqrt(1+x**2)) dx =
+    [i] sqrt(1+x**2) 2xdx =
+    [i] sqrt(u) du =
+    2/3 * u ** (3/2) + c =
+    2/3 * (x**2+1)**(3/2) + c
+  Check:
+    (2/3 * (x**2+1)**(3/2) + c)' =
+    2/3 * 3/2 * (x**2 + 1) ** (1/2) * 2x =
+    2x * sqrt(x**2 + 1)
+
+Substitution rule:
+    [i] (f(g(x)) * g'(x)) dx =
+    [i] (f(u)) du
+
+Example 2:
+    [i] sqrt(1+sqrt(x)) dx
+  Let's try 
+    u  = 1 + sqrt(x),
+    du = 1/(2*sqrt(x)) dx
+       = 1/(2(u-1)) dx
+    2 (u-1) du = dx
+    [i] sqrt(1+sqrt(x)) dx = 
+    [i] sqrt(u) 2(u-1)du =
+    2 * [i] (sqrt(u)*u - sqrt(u)) du =
+    2(2/3 * u ** (5/2) - 2/3 * u ** (3/2)) + c =
+    ....
+
+
+Par 6.1
+=======
+
+[i] 1/(1    + x**2) dx = arctan(x)
+[i] 1/(a**2 + x**2) dx = 1/(a**2) * [i] a/(1+ (x/a)**2) dx
+  Let's try u=x/a -> du = 1/a dx
+1/a * [i] = 1/(1+u**2) du =
+1/a * arctan(u) + c =
+1/a * arctan(x/a)+ c
+
+Par 6.2
+=======
+
+[i] ln x dx = x ln x - x + c
+check: (x ln x - x + c)' = ln x + x * 1/x - 1 = ln x
+
+Integration by parts: start from product rule as follows,
+====================
+
+  (f(x)g(x))' = f'(x)g(x)+f(x)g'(x), so
+  f(x)g'(x) = (f(x)g(x))' - f'(x)g(x)
+
+The antiderivatives:
+  [i] f(x)g'(x) dx = f(x)g(x) - [i] f'(x)g(x) dx
+
+
+Reqrite:      [i] f(x)g'(x) dx = f(x)g(x) - [i] f'(x)g(x)dx,
+
+By butting: {  u = f (x),    v = g (x)
+            { du = f'(x)dx, dv = g'(x)dx
+
+We obtain:    [i] u du = uv - [i] v dv
+
+
+Par 6.3
+=======
+          
